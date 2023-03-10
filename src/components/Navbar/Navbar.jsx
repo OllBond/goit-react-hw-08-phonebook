@@ -8,8 +8,6 @@ import Navigation from './Navigation/Navigation';
 import UserMenu from './UserMenu/UserMenu';
 import { isUserLogin } from 'redux/auth/auth-selectors';
 
-// import css from '../Navbar/navbar.module.css';
-
 const Navbar = () => {
   const isLogin = useSelector(isUserLogin);
   return (
