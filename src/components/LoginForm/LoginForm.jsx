@@ -4,25 +4,24 @@ import initialState from './initialState';
 import fields from './fields';
 import Button from 'shared/components/Button/Button';
 
-import css from '../RegisterForm/registerForm.module.css';
+import css from '../LoginForm/loginForm.module.css';
 
-const RegisterForm = ({ onSubmit }) => {
+const LoginForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({
     initialState,
     onSubmit,
   });
-  const { name, email, password } = state;
+  const { email, password } = state;
   return (
     <form onSubmit={handleSubmit} className={css.form}>
-      <TextField value={name} onChange={handleChange} {...fields.name} />
       <TextField value={email} onChange={handleChange} {...fields.email} />
       <TextField
         value={password}
         onChange={handleChange}
         {...fields.password}
       />
-      <Button>Register</Button>
+      <Button>Login</Button>
     </form>
   );
 };
-export default RegisterForm;
+export default LoginForm;

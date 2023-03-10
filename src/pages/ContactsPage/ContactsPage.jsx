@@ -1,8 +1,5 @@
+import PhoneBook from '../../components/PhoneBook/PhoneBook';
 const ContactsPage = () => {
-  return (
-    <div>
-      <h1>ContactsPage</h1>
-    </div>
-  );
+  return <PhoneBook />;
 };
 export default ContactsPage;
