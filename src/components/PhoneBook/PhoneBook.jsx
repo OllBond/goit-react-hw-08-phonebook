@@ -6,7 +6,7 @@ import ContactList from '../ContactList/ContactList';
 
 import { getFilteredContacts } from 'redux/contacts/contacts-selectors';
 
-import css from '../ContactForm/contactForm.module.css';
+import css from '../ContactForm/ContactForm.module.css';
 
 const PhoneBook = () => {
   const isContacts = Boolean(useSelector(getFilteredContacts).length);
