@@ -28,12 +28,12 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    dispatch(fetchAddContact({ name, phone }));
+    dispatch(fetchAddContact({ name, number }));
 
     setState({ ...initialState });
   };
 
-  const { name, phone } = state;
+  const { name, number } = state;
   return (
     <div className={css.wrapper}>
       <div className={css.contactFormBlock}>
@@ -57,10 +57,10 @@ const ContactForm = () => {
             <input
               className={css.input}
               // зв'язок інпуту і state
-              value={phone}
+              value={number}
               onChange={handleChange}
               type="tel"
-              name="phone"
+              name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
               title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
               required
