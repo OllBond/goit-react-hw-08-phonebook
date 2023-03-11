@@ -7,12 +7,12 @@ export const getFilteredContacts = createSelector(
   [getFilter, getAllContacts],
   (filter, contacts) => {
     const normalizedFilter = filter.toLowerCase();
-    const result = contacts.filter(({ name, phone }) => {
+    const result = contacts.filter(({ name, number }) => {
       return (
         // якщо у name є ці кілька літер - вертає true
         name.toLowerCase().includes(normalizedFilter) ||
         // або якщо у phone є ці кілька цифр - вертає true
-        phone.toLowerCase().includes(normalizedFilter)
+        number.toLowerCase().includes(normalizedFilter)
       );
     });
     return result;
