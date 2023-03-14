@@ -12,12 +12,14 @@ const PhoneBook = () => {
   const isContacts = Boolean(useSelector(getFilteredContacts).length);
   return (
     <>
-      <h1 className={css.title}>Phonebook</h1>
-      <ContactForm />
-      <h2 className={css.title}>Contacts</h2>
-      <Filter />
-      {isContacts && <ContactList />}
-      {!isContacts && <p>No contacts in list</p>}
+      <div className={css.wrapperContacts}>
+        <h1 className={css.title}>Phonebook</h1>
+        <ContactForm />
+        <h2 className={css.title}>Contacts</h2>
+        <Filter />
+        {isContacts && <ContactList />}
+        {!isContacts && <p>No contacts in list</p>}
+      </div>
     </>
   );
 };

@@ -2,13 +2,13 @@ import instance from './auth';
 
 export const getAllContacts = async () => {
   const { data } = await instance.get('/contacts');
-  console.log(data);
+  // console.log(data);
   return data;
 };
 
 export const addContact = async data => {
   const { data: result } = await instance.post('/contacts', data);
-  console.log(data);
+  // console.log(data);
   return result;
 };
 
