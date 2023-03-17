@@ -7,7 +7,7 @@ import contactsReducer from './contacts/contacts-slice';
 import filterReducer from './filter/filter-slice';
 
 const persistConfig = {
-  key: 'root',
+  key: 'token',
   storage,
   // whitelist - що саме записати в localStorage
   whitelist: ['token'],
