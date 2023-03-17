@@ -15,7 +15,7 @@ const UserMenu = () => {
   return (
     <div className={css.wrapperUserMenu}>
       <p className={css.userEmail}>{email}</p>
-      <button className={css.btnLogout} onClick={onLogout}>
+      <button className={css.btnLogout} onClick={onLogout} type="button">
         Logout
       </button>
     </div>
