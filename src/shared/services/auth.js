@@ -28,7 +28,7 @@ export const getCurrent = async token => {
   try {
     setToken(token);
     // чи цей token ще є, якщо так повертається user і token
-    const { data } = instance.get('/users/current');
+    const { data } = await instance.get('/users/current');
     return data;
   } catch (error) {
     setToken();
