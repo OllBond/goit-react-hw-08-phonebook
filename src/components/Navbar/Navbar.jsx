@@ -11,7 +11,7 @@ import { isUserLogin } from 'redux/auth/auth-selectors';
 const Navbar = () => {
   const isLogin = useSelector(isUserLogin);
   return (
-    <AppBar position="static" component="header" sx={{ background: '#3D76DA' }}>
+    <AppBar position="static" component="header" sx={{ background: 'indigo' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters component="nav">
           <Home sx={{ display: { md: 'flex' }, mr: 1 }} />
@@ -28,6 +28,7 @@ const Navbar = () => {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              fontSize: '28px',
             }}
           >
             Home
