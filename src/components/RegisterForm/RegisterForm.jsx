@@ -12,6 +12,7 @@ const RegisterForm = ({ onSubmit }) => {
     onSubmit,
   });
   const { name, email, password } = state;
+
   return (
     <form onSubmit={handleSubmit} className={css.form}>
       <TextField value={name} onChange={handleChange} {...fields.name} />

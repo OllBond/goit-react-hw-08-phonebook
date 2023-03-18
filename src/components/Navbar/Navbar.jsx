@@ -31,7 +31,7 @@ const Navbar = () => {
               fontSize: '28px',
             }}
           >
-            Home
+            My Phonebook
           </Typography>
           {!isLogin && <Navigation />}
           {isLogin && <UserMenu />}
