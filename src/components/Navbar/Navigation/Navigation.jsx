@@ -8,7 +8,7 @@ const Navigation = () => {
       <NavLink to="/register" className={css.link}>
         Register
       </NavLink>
-      |
+      <span className={css.line}>|</span>
       <NavLink to="/login" className={css.link}>
         Login
       </NavLink>

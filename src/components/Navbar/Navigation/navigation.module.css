@@ -9,3 +9,7 @@
 .link:global(.active) {
   font-weight: bold;
 }
+.line {
+  color: #fff;
+  font-size: 25px;
+}
