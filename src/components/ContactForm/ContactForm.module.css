@@ -1,14 +1,13 @@
-.wrapper {
-  display: grid;
-  gap: 30px;
-}
-.wrapperContacts {
-  padding: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.14),
-    0 2px 1px rgba(0, 0, 0, 0.2);
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: grid;
+    gap: 30px;
+  }
+  .wrapperContacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .contactFormBlock {
@@ -16,7 +15,6 @@
   padding: 15px;
   display: flex;
   flex-direction: column;
-  margin-left: 10px;
   margin-bottom: 30px;
   margin-right: auto;
   gap: 10px;
@@ -46,6 +44,11 @@
   font-size: 30px;
   border: 2px solid gainsboro;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+@media screen and (max-width: 767px) {
+  .input {
+    font-size: 22px;
+  }
 }
 .btnAddContact {
   display: flex;

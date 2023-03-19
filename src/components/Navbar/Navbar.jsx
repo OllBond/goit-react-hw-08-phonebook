@@ -1,43 +1,24 @@
 import { useSelector } from 'react-redux';
-
+import { NavLink } from 'react-router-dom';
 import * as React from 'react';
-import { AppBar, Container, Toolbar, Typography } from '@mui/material';
-import { Home } from '@mui/icons-material';
+import { BsPhone } from 'react-icons/bs';
 
 import Navigation from './Navigation/Navigation';
 import UserMenu from './UserMenu/UserMenu';
 import { isUserLogin } from 'redux/auth/auth-selectors';
 
+import css from '../Navbar/navbar.module.css';
+
 const Navbar = () => {
   const isLogin = useSelector(isUserLogin);
   return (
-    <AppBar position="static" component="header" sx={{ background: 'indigo' }}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters component="nav">
-          <Home sx={{ display: { md: 'flex' }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/goit-react-hw-08-phonebook"
-            sx={{
-              mr: 12,
-              display: { md: 'flex' },
-              fontFamily: 'roboto',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-              fontSize: '28px',
-            }}
-          >
-            My Phonebook
-          </Typography>
-          {!isLogin && <Navigation />}
-          {isLogin && <UserMenu />}
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <div className={css.navbar}>
+      <NavLink to="/" className={css.titleMyPhonebook}>
+        My Phonebook <BsPhone />
+      </NavLink>
+      {!isLogin && <Navigation />}
+      {isLogin && <UserMenu />}
+    </div>
   );
 };
 export default Navbar;
